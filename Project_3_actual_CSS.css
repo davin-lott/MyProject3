@@ -1,0 +1,154 @@
+body{
+    background-color: #6caccb;
+}
+
+a:visited{
+    color: blue
+}
+
+.heading{
+    width:90%;
+    height: 100px; 
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    background-color: #242a69;
+    margin: auto;
+}
+
+.heading > img {
+    height: 33.3%;
+    justify-self:start;
+    grid-column-start:1;
+}
+
+
+#mainheader{
+    color: #d7bd84;
+    font-size: xx-large;
+    grid-column-start: 2;
+    justify-self: center;
+     
+}
+
+.mymenu{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+    /*max-width: 200px;
+    min-width: 150px;
+    background-color: #d7bd84;
+    border-color: black;
+    border-style: solid;*/
+    column-gap: 10px;
+    margin: auto;
+}
+
+button{
+    background-color: #242a69;
+    color: #d7bd84;
+}
+
+button:hover{
+    background-color: #2e3688;
+}
+
+
+.mainpage > p{
+    width: 75%;
+    margin: auto;
+}
+
+.thepage{
+    display: grid;
+    width:90%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin:auto;
+    height: 600px;
+    justify-content: center;
+}
+
+.contactpage{
+    display: grid;
+    align-items: center;
+}
+
+.mainpage, .contactpage, .questionpage{
+    width:auto;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-content: space-around;
+}
+
+h2{
+    font-size: x-large;
+}
+
+.contactpage, .questionpage{
+    display:none; /*Turns off the display of both the contact and question part of the page*/
+}
+
+footer{
+    display: grid;
+    background-color: #eacf88;
+    height: 75px;
+    text-align: center;
+    align-items: center;
+}
+
+.mainpage > img{
+    width: 400px;
+    height: auto;
+}
+
+#cruisepicture{
+    max-width: 30%;
+    height: auto;
+}
+
+.picGroup > img{
+    border-radius: 5%;
+    max-width: 15%;
+    height: auto;
+}
+
+.picGroup{
+    display:flex;
+    justify-content: space-around   ;
+    width: 95%;
+    gap: 10px;
+    margin: 5px;
+
+}
+
+/*I made the max-width these specific px because that was where exactly it was messing with my header*/
+@media only screen and (max-width: 832px){
+    #mainheader{
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width: 628px) {
+    #mainheader{
+        font-size: large;
+        grid-column-start: 3;
+        justify-self: right;
+    }
+    .mymenu{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    button{
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 475px){
+    #mainheader{
+        font-size: medium;
+        justify-self: center;
+    }
+}
