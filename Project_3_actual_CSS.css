@@ -151,4 +151,7 @@ footer{
         font-size: medium;
         justify-self: center;
     }
+    button{
+        height: 30px;
+    }
 }
