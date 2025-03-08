@@ -132,6 +132,10 @@ footer{
         width: 70%;
         height: auto;
     }
+    #cruisepicture{
+        max-width: 80%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 628px) {
@@ -148,10 +152,6 @@ footer{
     button{
         height: 20px;
     }
-    #cruisepicture{
-        max-width: 70%;
-        height: auto;
-    }
 }
 
 @media only screen and (max-width: 475px){
@@ -161,9 +161,5 @@ footer{
     }
     button{
         height: 30px;
-    }
-    #cruisepicture{
-        max-width: 70%;
-        height: auto;
     }
 }
