@@ -27,6 +27,7 @@ button:hover{
 
 header{
     grid-area: myHeader;
+    text-transform: capitalize;
 }
 
 .mymenu{
