@@ -50,6 +50,7 @@ nav{
     height: 30px;
     text-transform: lowercase;
     font-size: medium;
+    border-radius:5px;
 }
 
 .thepage{
