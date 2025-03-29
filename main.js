@@ -1,100 +1,114 @@
-/*Here are my reflections comments.
-This was a hard project. I learned a lot, especially about how CSS actually works.
-I wish I could have started sooner, but I am happy with what I got done.
-My biggest regret is that I didn't have more content in my website, but I am satisfied with the CSS,
-Javascript, and HTML that I was able to put together. I think it all came together pretty well. I hope 
-the time and effort that I put in shows in this
-*/
+<!DOCTYPE html>
+<html>
+<!--
+--SELF GRADE--
+REFACTOR CSS-FIX       A
+CSS THEME              B
+CSS THEME TOGGLE     A
+MOBILE RESPONSIVE    B
 
-let onOrOff = false
+ADDITIONAL COMMENTS
+To be honest, I tried really hard to get things to look good,
+but I just couldn't figure it out. I wanted to add a sticky feature
+to the menu buttons on the side, but they wouldn't go all they way 
+down, so I just laid them on top of each other for making them 
+different. Overall, I can honestly say I tried my best, but I don't
+know how much more I could have done without just making an entirely 
+new project.
 
-function changeDaTheme(){let newSheet = document.createElement("link")
-    if (onOrOff == false){
-        let newSheet = document.createElement("link")
-        newSheet.rel = "stylesheet"
-        newSheet.href = "secondCss.css"
-        newSheet.style.id="secondSheet"
-        document.getElementsByTagName("head")[0].appendChild(newSheet)
-        onOrOff = true
-    } else{
-        let myHead = document.getElementsByTagName("head")[0]
-        myHead.removeChild(myHead.lastChild)
-        onOrOff = false
-    }
+I also did change the font for this, as well as I made the buttons for my menu
+rounded just a bit to make them even more different. 
 
-}
+Another thing I aded for this project is made the header capitalize when it switches
+styles, unlike how it was before, and made the buttons lowercase, where before they 
+were uppercase.
 
+Along with the header, I added a border around the heading, just to make it more different.
 
-function changeDisplayOn(daClassName, newAttribute){
-    document.getElementsByClassName(daClassName).item(0).style.display = newAttribute
-}
-
-function changeDisplayOff(daClassName){
-    document.getElementsByClassName(daClassName).item(0).style.display = "none"
-}
-
-function clickedThis(daClassName){
-    if (daClassName == "mainpage"){
-        changeDisplayOn("mainpage", "grid")
-        changeDisplayOff("contactpage")
-        changeDisplayOff("questionpage")
-    }
-    if(daClassName == "contactpage" ){
-        changeDisplayOff("mainpage")
-        changeDisplayOn("contactpage", "grid")
-        changeDisplayOff("questionpage")
-    }
-    if(daClassName == "questionpage"){
-        changeDisplayOff("mainpage")
-        changeDisplayOff("contactpage")
-        changeDisplayOn("questionpage", "grid")
-    }
-}
-
-
-function clickmain(){
-    clickedThis("mainpage")
-}
-
-function clickcontact(){
-    clickedThis("contactpage")
-}
-
-function clickquestion(){
-    clickedThis("questionpage")
-}
+Again, sorry it isn't more changed with Flex and Grid. I really tried, but I couldn't make 
+it look how I wanted, or good. I did stack the buttons instead of having them next to each 
+other, but that is as successful as I could make it.
 
 
 
+--> 
 
 
-/*function changeDisplayOn(daClassName){
-    document.getElementsByClassName(daClassName).item(0).style.display = "inline-block"
-}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
+    </head>
 
-function changeDisplayOff(daClassName){
-    document.getElementsByClassName(daClassName).item(0).style.display = "none"
-}
+    <body>
+        <section>
+            <header>
+                <img src="lorcana_symbol.png" alt="Lorcana Symbol" onclick="clickmain()">
+                <h1 id="mainheader">What is Lorcana?</h1>
+                <p id="changeStyle" onclick="changeDaTheme()">Change style</p>
+            </header>
+            <br>
+            <div id="makeMenuOnSide"><nav><div class="mymenu">
+                <button id="homebutton" onclick="clickmain()">HOME </button>
+                <button id="contactbutton" onclick="clickcontact()"> CONTACT</button>
+                <button id="?button" onclick="clickquestion()">MORE INFO</button>
+            </div> 
+            </nav>
+        </section>
+        <br>
+        <section class="thepage">
+            <div class="mainpage">
+                <h2 id="firstHeader">What is Lorcana?</h2>
+                <p id="paraOne">Lorcana is a Trading Card Game (TCG) made by Disney, like Pokémon or Magic the Gathering. The cards are fun to 
+                                trade, look at the art, and to play the game against opponents. You play with some classic characters of 
+                                Disney lore, including Mickey Mouse, Cinderella, Hei Hei, Genie, and more!
+                </p>
+                <p id="paraTwo">Lorcana is probably my favorite table-top game, and it's a shame that more people don't know what it is. One of my
+                                favorite things about it is that it is so friendly to everyone. People who might not want orcs and monsters love that 
+                                that they can play with some of their favorite characters!
+                </p>
+                <p>There are so many other reasons to love Lorcana, but there is only so much I can describe about it. Just know it is a chill,
+                    strategic game that is fun for everyone!
+                </p>
+                <div class="picGroup">
+                    <img id="themouse" src="mickeymousecard.jpg" alt="Mickey Mouse Lorcana Card">
+                    <img src="cinderellaLorcanaCard.jpg" alt="Cinderella Lorcana Card">
+                    <img id="heihei" src="hei hei card.jpg" alt="Hei Hei Lorcana Card">
+                    <img src="genieLorcanaCard.jpg" alt="Genie Lorcana Card">
+                </div>
+            </div>
+        
+        
+        
+            <div class="contactpage">
+            <h2>My Contact Info</h2>
+            <figure>
+                <img id="cruisepicture" src="playing_lorcana_on_cruise.jpg" alt="My family and I playing Lorcana on our cruise">
+                <figcaption>A blurry selfie of me playing Lorcana with family</figcaption>
+            </figure>
+            <p id="myEmail"><strong>Email:</strong> legodav42@gmail.com</p>
+            <p id="myInsta"><strong>Instagram:</strong> @davinjuggles</p>
+            </div>
+        
 
-function clickedThis(daClassName){
-    if (daClassName == "")
-}
+        <div class="questionpage">
+            <h2 id="questionHeader"><u>More Information</u></h2>
+            <p>If you want to get into Lorcana, I would suggest starting with a starter deck, which is a 
+                deck that is pre-made and usually does pretty well on its own. You can find starter decks
+                <a href="https://www.amazon.com/lorcana-starter-deck/s?k=lorcana+starter+deck">online</a> or 
+                at board game stores.
+            </p>
+            <p>Link to Lorcana's official <a href="https://www.disneylorcana.com/en-US/" target="_blank">webpage</a></p>
+            <figure>
+                <iframe id="youtubevid" src="https://www.youtube.com/embed/1FgwKHzE0w8?si=s20M8FRY8cqxN5ka" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>A video breaking down each color in Lorcana</figcaption>
+            </figure>
+        </div>
+    </div>
+        </section>
+        <section>
+            <footer>This is not sponsored by Disney or Lorcana. I just really love Lorcana.</footer>
+        </section>
+    </body>
 
-
-function clickmain(){
-    changeDisplayOn("mainpage")
-    changeDisplayOff("contactpage")
-    changeDisplayOff("questionpage")
-}
-
-function clickcontact(){
-    changeDisplayOff("mainpage")
-    changeDisplayOn("contactpage")
-    changeDisplayOff("questionpage")
-}
-
-function clickquestion(){
-    changeDisplayOff("mainpage")
-    changeDisplayOff("contactpage")
-    changeDisplayOn("questionpage")
-}*/
+</html>
