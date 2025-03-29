@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
+<!--
+--SELF GRADE--
+REFACTOR CSS-FIX       A
+CSS THEME              B
+CSS THEME TOGGLE     A
+MOBILE RESPONSIVE    B
+
+ADDITIONAL COMMENTS
+To be honest, I tried really hard to get things to look good,
+but I just couldn't figure it out. I wanted to add a sticky feature
+to the menu buttons on the side, but they wouldn't go all they way 
+down. I did change the colors and the font for the page, and I 
+made it so the menu buttons are different. Overall, I can honestly 
+say I tried my best, but I don't know how much more I could have done without 
+just making an entirely new project.
+
+
+
+--> 
+
+
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Project_3_actual_CSS.css">
-        <script src="Project_3_js.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
     </head>
 
     <body>
         <section>
-            <div class="heading">
-                <img src="lorcana_symbol.png" alt="Lorcana Symbol">
-                <header><h1 id="mainheader">What is Lorcana?</h1></header>
-            </div>
+            <header>
+                <img src="lorcana_symbol.png" alt="Lorcana Symbol" onclick="clickmain()">
+                <h1 id="mainheader">What is Lorcana?</h1>
+                <p id="changeStyle" onclick="changeDaTheme()">Change style</p>
+            </header>
             <br>
-            <nav><div class="mymenu">
+            <div id="makeMenuOnSide"><nav><div class="mymenu">
                 <button id="homebutton" onclick="clickmain()">HOME </button>
                 <button id="contactbutton" onclick="clickcontact()"> CONTACT</button>
                 <button id="?button" onclick="clickquestion()">MORE INFO</button>
@@ -57,7 +79,7 @@
         
 
         <div class="questionpage">
-            <h2 id="questionHeader">More Information</h2>
+            <h2 id="questionHeader"><u>More Information</u></h2>
             <p>If you want to get into Lorcana, I would suggest starting with a starter deck, which is a 
                 deck that is pre-made and usually does pretty well on its own. You can find starter decks
                 <a href="https://www.amazon.com/lorcana-starter-deck/s?k=lorcana+starter+deck">online</a> or 
@@ -69,6 +91,7 @@
             <figcaption>A video breaking down each color in Lorcana</figcaption>
             </figure>
         </div>
+    </div>
         </section>
         <section>
             <footer>This is not sponsored by Disney or Lorcana. I just really love Lorcana.</footer>
