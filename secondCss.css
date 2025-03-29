@@ -46,6 +46,8 @@ nav{
 .mymenu > button{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 30px;
+    text-transform: lowercase;
+    font-size: medium;
 }
 
 .thepage{
@@ -87,5 +89,5 @@ a, a:visited{
         max-width: 15%;
         height: auto;
         min-width: 10%;
-    }
+}
 }
